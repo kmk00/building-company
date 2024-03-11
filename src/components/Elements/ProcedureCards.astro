@@ -1,0 +1,46 @@
+---
+
+import ProcedureCard from './ProcedureCard.astro';
+
+import houseIcon from '../../assets/house-solid.svg';
+import pencilIcon from '../../assets/pencil-solid.svg';
+import commentsIcon from '../../assets/comments-solid.svg';
+
+
+---
+
+<div class="cards">
+    <div class="cards-container">
+        <ProcedureCard src={houseIcon.src} mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
+        <ProcedureCard src={pencilIcon.src} mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."  />
+        <ProcedureCard src={commentsIcon.src} mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
+    </div>
+</div>
+
+
+<style>
+
+.cards{
+    margin-top: 2rem;
+    container-type: inline-size;
+    container-name: cards;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+@container cards (max-width: 768px) {
+
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+}
+
+</style>

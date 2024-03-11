@@ -1,0 +1,35 @@
+---
+import H4 from './H4.astro';
+import TextParagraph from './TextParagraph.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+    mainText: string;
+    subText: string;
+    primary?: boolean
+    src?: string
+}
+
+const { mainText, subText, primary,src } = Astro.props;
+
+---
+
+<div class={primary ? 'primary' : ''}>
+    <Icon alt="icon" src={src} />
+    <H4>{mainText}</H4>
+    <TextParagraph>{subText}</TextParagraph>
+</div>
+
+
+<style>
+
+.primary{
+    background-color: #f5f5f5;
+}
+
+div{
+    border: 1px rgb(56, 56, 56) solid;
+    padding: 2rem;
+}
+
+</style>
