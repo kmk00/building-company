@@ -2,47 +2,49 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import image from "../../assets/who-we-are-image.jpg";
+import CarouselImage from "../Elements/CarouselImage";
 
 function ImageCarousel() {
-  console.log(image);
+  const sectionStyles = {
+    marginBlock: "4rem",
+    padding: "1.5rem",
+  };
 
   return (
-    <>
+    <section style={sectionStyles}>
       <Swiper
         spaceBetween={10}
         slidesPerView={5}
+        navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 1000, disableOnInteraction: false }}
       >
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image.src} width={80} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image.src} width={80} />
+          <CarouselImage src={image.src} alt="Who we are image" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 }
 
