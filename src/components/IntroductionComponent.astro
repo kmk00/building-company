@@ -1,0 +1,35 @@
+---
+import H2 from './Elements/H2.astro';
+import H6 from './Elements/H6.astro';
+import TextParagraph from './Elements/TextParagraph.astro';
+import ItemsList from './Elements/ItemsList.astro';
+import image from '../assets/who-we-are-image.jpg';
+import {Image} from 'astro:assets'
+
+---
+
+<section>
+    <Image src={image} alt="image" />
+    <div class="text-container">
+        <H6>WHO WE ARE</H6>
+        <H2>WE ARE PERFECT TEAM FOR HOME INTERIOR DECORATION</H2>
+        <TextParagraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</TextParagraph>
+        <TextParagraph>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</TextParagraph>
+        <ItemsList items={["Flexible Time", "Perfect Work", "Client Priority", "Flexible Time","Perfect Work","Client Priority"]} />
+    </div>
+</section>
+
+
+<style>
+
+section{
+    display: flex;
+    padding: 6.8rem;
+
+}
+
+.text-container{
+    padding: 4.6rem;
+}
+
+</style>

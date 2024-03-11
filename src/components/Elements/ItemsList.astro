@@ -1,0 +1,29 @@
+---
+
+interface Props {
+    items: string[]
+}
+
+const { items } = Astro.props
+
+---
+
+<ul>
+    {items.map(item => <li>{item}</li>)}
+</ul>
+
+
+<style>
+
+ul{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li{
+    font-size: 1.6rem;
+    padding: 0.4rem;
+}
+
+</style>
