@@ -1,5 +1,6 @@
 ---
 import NavigationComponent from '../components/Navigation/NavigationComponent.astro';
+import Footer from '../components/Footer/Footer.astro';
 interface Props {
 	title: string;
 }
@@ -19,8 +20,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<NavigationComponent />
-		<slot />
+		<slot />	
 	</body>
+	<Footer />
 </html>
 
 <style is:global>
@@ -38,7 +40,7 @@ html{
 	overflow-x: hidden;
 }
 
-body{
+main{
 	max-width: 1600px;
 	margin:auto;
 	padding: 2rem;
