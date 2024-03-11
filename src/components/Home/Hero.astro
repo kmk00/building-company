@@ -1,0 +1,44 @@
+---
+
+import H1 from '../H1.astro';
+import H6 from '../H6.astro';
+import TextParagraph from '../H6.astro';
+import Button from '../Button.astro';
+
+
+---
+
+<div>
+    <div class="hero-content">
+        <H6>WELCOME TO HOMCO</H6>
+        <H1>BUILD YOUR ELEGAN DREAM HOME INTERIOR</H1>
+        <TextParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</TextParagraph>
+        <Button label="Get Started" />
+    </div>
+</div>
+
+<style>
+
+div{
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    padding-inline: 6rem;
+    container-type: inline-size;
+    container-name: hero-text;
+}
+
+.hero-content{
+    max-width: 60%;
+}
+
+@container hero-text (max-width: 1100px) {
+    
+    .hero-content{
+        max-width: 100%;
+    }
+    
+}
+
+
+
+</style>
