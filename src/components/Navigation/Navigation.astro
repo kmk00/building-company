@@ -1,0 +1,21 @@
+---
+import NavItem from './NavigationItem.astro';
+---
+
+<nav>
+    <NavItem href="/" label="Home"  />
+    <NavItem href="/about" label="About"  />
+    <NavItem href="/services" label="Our Services"  />
+    <NavItem href="/projects" label="Our Projects"  />
+    <NavItem href="/portfolio" label="Portfolio"  />
+</nav>
+
+
+<style>
+
+nav{
+    display: flex;
+    gap:calc(1.8rem * 0.8);
+}
+
+</style>
