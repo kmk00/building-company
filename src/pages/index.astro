@@ -4,6 +4,7 @@ import Hero from '../components/Home/Hero.astro';
 import ServiceCards from '../components/Elements/ServiceCards.astro';
 import IntroductionComponent from '../components/IntroductionComponent.astro';
 import OurWorkProcedureComponent from '../components/OurWorkProcedureComponent.astro';
+import ImageCarousel from '../components/Home/ImageCarousel';
 ---
 
 <Layout title="Home">
@@ -12,8 +13,7 @@ import OurWorkProcedureComponent from '../components/OurWorkProcedureComponent.a
 		<ServiceCards />
 		<IntroductionComponent />
 		<OurWorkProcedureComponent />
-		
+		<ImageCarousel client:only />
 	</main>
 </Layout>
-
 
