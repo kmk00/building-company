@@ -1,0 +1,30 @@
+---
+import Video from './Elements/Video.astro';
+import H6 from './Elements/H6.astro';
+import H2 from './Elements/H2.astro';
+import TextParagraph from './Elements/TextParagraph.astro';
+import ItemsList from './Elements/ItemsList.astro';
+---
+
+<div class="video-container">
+    <Video srcPath="https://www.youtube.com/embed/NpEaa2P7qZI" />
+    <div>
+        <H6>Trust Us Now</H6>
+        <H2>WHY CHOICE OUR HOME DESIGN INTERIOR SERVICES</H2>
+        <TextParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</TextParagraph>
+        <ItemsList items={["Flexible Time", "Perfect Work", "Client Priority", "Flexible Time","Perfect Work","Client Priority"]} />
+    </div>
+</div>
+
+<style>
+    .video-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-block: 2rem;
+    }
+
+    .video-container > div{
+        width: 60%;
+    }
+</style>
