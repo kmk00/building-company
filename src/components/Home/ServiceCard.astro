@@ -1,0 +1,36 @@
+---
+import H4 from '../Elements/H4.astro';
+import TextParagraph from '../Elements/TextParagraph.astro';
+import ArrowIcon from '../Elements/ArrowIcon.astro';
+
+interface Props {
+    mainText: string;
+    subText: string;
+    accent?: boolean
+}
+
+const { mainText, subText,accent } = Astro.props;
+
+---
+
+<div class={accent ? 'accent' : ''}>
+    <H4>{mainText}</H4>
+    <TextParagraph>{subText}</TextParagraph>
+    <ArrowIcon />
+</div>
+
+
+<style>
+
+.accent{
+    background-color: #4e4a4a;
+}
+
+div{
+    padding-block: 2rem;
+    background-color: #f5f5f5;
+    max-width: 340px;
+    padding: 2rem;
+}
+
+</style>
