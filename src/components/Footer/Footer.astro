@@ -12,27 +12,29 @@ import FooterMenu from './FooterMenu.astro';
     <div>
         <FooterMenu />
     </div>
-
 </footer>
 
 <style>
     footer{
         text-align: center;
-        padding-block: 2rem;
         background-color: rgb(80, 66, 66);
-        margin-top: 20rem;
     }
 
     div:nth-child(2){
         margin-top: 3rem;
         padding-inline: 2rem;
+        transform: translateY(-4rem);
+
         
+    }
+
+    div:nth-child(1){
+        transform: translateY(-12rem);
     }
 
     div{
         max-width: 1600px;
         margin-inline: auto;
-        transform: translateY(-25rem);
     }
 
 </style>
