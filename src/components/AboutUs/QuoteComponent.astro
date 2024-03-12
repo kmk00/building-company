@@ -1,0 +1,36 @@
+---
+import H1 from '../Elements/H1.astro';
+import ProcedureCard from '../Elements/ProcedureCard.astro';
+import phoneIcon from '../../assets/phone-icon.svg';
+---
+
+
+<section>
+    <!-- Quote Component -->
+    <div>
+        <ProcedureCard src={phoneIcon.src} mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
+    </div>
+    <H1>"WORK HARD & GREAT QUALITY IS MY PRIORITY"</H1>
+
+</section>
+
+
+
+<style>
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 6.8rem;
+    justify-items: flex-end;
+    gap: 2rem;
+}
+
+div{
+    max-width: 70%;
+    background-color: cadetblue;
+}
+
+
+
+</style>
