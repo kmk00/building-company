@@ -1,0 +1,26 @@
+---
+
+import H6 from '../Elements/H6.astro';
+import H2 from '../Elements/H2.astro';
+import TextParagraph from '../Elements/TextParagraph.astro';
+import QuestionList from './QuestionList.astro';
+
+
+---
+
+<section>
+<!-- Question Component -->
+    <H6>first question answer</H6>
+    <H2>QUESTION ANSWER TRENDING WEEKLY</H2>
+    <TextParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</TextParagraph>
+    <QuestionList questions={[{question: "first question", answer: "first answer"}, {question: "second question", answer: "second answer"}, {question: "third question", answer: "third answer"}]} />
+
+</section>
+
+<style>
+
+section{
+    padding: 4rem;
+}
+
+</style>

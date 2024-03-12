@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SecondaryHeader from '../components/SecondaryHeader.astro';
+import QuestionComponent from '../components/FAQ/QuestionComponent.astro';
+import { Image } from 'astro:assets';
+import image from '../assets/img/galleryImage.jpg';
+
+---
+
+<Layout title="FAQ">
+	<main>
+		<SecondaryHeader title="FAQ" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
+        <div>
+            <div class="image-container">
+                <Image src={image} width={600} height={400} alt="image" />
+            </div>
+            <QuestionComponent />
+        </div>
+        <div>
+            <div class="image-container">
+                <Image src={image} width={600} height={400} alt="image" />
+            </div>
+            <QuestionComponent />
+        </div>
+	</main>
+</Layout>
+
+
+<style>
+
+main > div{
+    display: flex;
+    padding-block: 4rem;
+}
+
+main > div:nth-child(2n + 1){
+    flex-direction: row-reverse;
+}
+
+
+
+</style>
