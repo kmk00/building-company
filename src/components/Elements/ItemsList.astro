@@ -1,5 +1,4 @@
 ---
-
 interface Props {
     items: string[]
 }
@@ -16,14 +15,24 @@ const { items } = Astro.props
 <style>
 
 ul{
-    padding: 2rem;
+    padding: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 li{
     font-size: 1.6rem;
     padding: 0.4rem;
+      
 }
+
+li::marker{
+    content: '✓';
+    color: red;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
 
 </style>

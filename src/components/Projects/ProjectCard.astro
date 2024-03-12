@@ -1,0 +1,50 @@
+---
+import H4 from '../Elements/H4.astro'
+import ItemsList from '../Elements/ItemsList.astro'
+import Button from '../Elements/Button.astro'
+
+interface Props {
+    image: string
+    title: string
+    listElements: string[]
+    btnLabel: string
+}
+
+const { image, title, listElements, btnLabel } = Astro.props
+
+---
+
+
+<div class="card">
+    <img src={image} alt="image">
+    <div>
+        <H4>{title}</H4>
+        <ItemsList items={listElements} />
+        <Button label={btnLabel} />
+    </div>
+</div>
+
+
+
+<style>
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.4rem 3.2rem;
+    }
+    
+    img{
+        max-width: 300px;
+    }
+
+    .card div{
+        background-color: white;
+        width: 90%;
+        padding: 1rem;
+        transform: translateY(-5rem);
+
+    }
+    
+    </style>
