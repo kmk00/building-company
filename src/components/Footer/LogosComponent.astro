@@ -1,12 +1,27 @@
+---
+import logo from '../../assets/partner-logo.svg';
+import logo1 from '../../assets/partner-logo1.svg';
+import logo2 from '../../assets/partner-logo2.svg';
+import logo3 from '../../assets/partner-logo3.svg';
+import { Image } from 'astro:assets';
+
+---
 <div>
-    dsa
+    <Image src={logo3} alt="partner-logo" />
+    <Image src={logo2} alt="partner-logo" />
+    <Image src={logo1} alt="partner-logo" />
+    <Image src={logo} alt="partner-logo" />
 </div>
 
 
 <style>
 
 div{
-    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    gap:8rem;
+    transform: translateY(6rem);
 }
 
 </style>
