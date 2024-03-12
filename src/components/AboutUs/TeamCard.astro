@@ -1,0 +1,73 @@
+---
+import Icon from '../Elements/Icon.astro'
+interface Props {
+    image: string
+    name: string
+    surname: string
+    position: string
+    fblink: string
+    twitterlink: string
+    linkedinlink: string
+    accent?: boolean
+}
+
+const { image, name, surname, position, fblink, twitterlink, linkedinlink,accent } = Astro.props
+
+---
+
+
+<div class={accent ? "card accent" : "card"}>
+    <img src={image} alt="image">
+    <p>{position}</p>
+    <p>{name} {surname}</p>
+    <div>
+        <a href={fblink} target="_blank" rel="noopener noreferrer">
+            <Icon src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram"/>
+        </a>
+        <a href={twitterlink} target="_blank" rel="noopener noreferrer">
+            <Icon src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="twitter"/>
+        </a>
+        <a href={linkedinlink} target="_blank" rel="noopener noreferrer">
+            <Icon src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin"/>
+        </a>
+    </div>
+</div>
+
+<style>
+
+.accent{
+    background-color: #502727;
+}
+
+.card{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2.4rem 3.2rem;
+}
+
+p:nth-child(2){
+    font-size: 1.4rem;
+}
+
+p:nth-child(3){
+    font-size: 2.4rem;
+}
+
+p{
+    font-weight: 800;
+}
+
+.card div{
+    display: flex;
+    gap: 3rem;
+}
+
+img{
+    max-width: 300px;
+}
+
+</style>

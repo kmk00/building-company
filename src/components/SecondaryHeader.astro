@@ -1,0 +1,46 @@
+---
+
+import H1 from './Elements/H1.astro';
+import TextParagraph from './Elements/TextParagraph.astro';
+
+interface Props {
+    title: string
+    text: string
+}
+
+const { title, text } = Astro.props
+
+---
+
+<section>
+    <!-- Hero Section -->
+    <div class="hero-content">
+        <H1>{title}</H1>
+        <TextParagraph>{text}</TextParagraph>
+    </div>
+</section>
+
+<style>
+
+div{
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    container-type: inline-size;
+    container-name: hero-text;
+}
+
+.hero-content{
+    max-width: 60%;
+}
+
+@container hero-text (max-width: 1100px) {
+    
+    .hero-content{
+        max-width: 100%;
+    }
+    
+}
+
+
+
+</style>
