@@ -1,9 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SecondaryHeader from '../components/SecondaryHeader.astro';
+import ServiceCards from '../components/Elements/ServiceCards.astro';
+import OurWorkProcedureComponent from '../components/OurWorkProcedureComponent.astro';
+
 ---
 
-<Layout title="Services">
+<Layout title="About">
 	<main>
-
+		<SecondaryHeader title="Our Services" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
+		<div>
+			<ServiceCards />
+		</div>
+		<OurWorkProcedureComponent />
 	</main>
 </Layout>
+
+
+<style>
+
+div{
+	margin-top: 8rem;
+}
+
+</style>
