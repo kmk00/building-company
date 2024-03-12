@@ -1,0 +1,35 @@
+---
+
+interface Props {
+    src: string
+    alt: string
+    mainText: string
+}
+
+const { src, alt, mainText } = Astro.props
+
+import Icon from '../Elements/Icon.astro';
+
+---
+
+<div>
+    <Icon alt={alt} src={src} />
+    <p>{mainText}</p>
+</div>
+
+<style>
+
+div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding-block: 1rem;
+}
+
+p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+</style>

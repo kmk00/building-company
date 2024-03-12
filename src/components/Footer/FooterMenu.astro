@@ -1,0 +1,27 @@
+---
+
+import Information from './Information.astro';
+import FooterNavigation from './FooterNavigation.astro';
+import ContactMenu from './ContactMenu.astro';
+
+
+---
+
+
+<div>
+    <Information />
+    <FooterNavigation />
+    <ContactMenu />
+</div>
+
+
+<style>
+
+div{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    text-align: left;
+}
+
+</style>

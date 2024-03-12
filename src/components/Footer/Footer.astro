@@ -2,28 +2,37 @@
 
 import CallToAction from './CallToAction.astro';
 import LogosComponent from './LogosComponent.astro';
-
+import FooterMenu from './FooterMenu.astro';
 ---
 <footer>
     <div>
         <LogosComponent />
         <CallToAction />
     </div>
-    
+    <div>
+        <FooterMenu />
+    </div>
+
 </footer>
 
 <style>
     footer{
         text-align: center;
         padding-block: 2rem;
-        background-color: brown;
+        background-color: rgb(80, 66, 66);
         margin-top: 20rem;
+    }
+
+    div:nth-child(2){
+        margin-top: 3rem;
+        padding-inline: 2rem;
+        
     }
 
     div{
         max-width: 1600px;
         margin-inline: auto;
         transform: translateY(-25rem);
-
     }
+
 </style>
