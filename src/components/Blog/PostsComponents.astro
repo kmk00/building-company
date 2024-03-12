@@ -1,0 +1,38 @@
+---
+import PostCard from './PostCard.astro';
+type Post = {
+    title: string;
+    description: string;
+    thumbnail: string
+}
+
+interface Props {
+    posts: Post[]
+}
+
+const { posts } = Astro.props
+
+---
+
+<section>
+    {posts.map((post) => (
+        <PostCard title={post.title} description={post.description} thumbnail={post.thumbnail} />
+    ))}
+</section>
+
+
+
+<style>
+
+    section{
+        max-width: 90%;
+        margin-inline: auto;
+        margin-top: 2rem;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        justify-items: center;
+    
+    }
+    
+    </style>

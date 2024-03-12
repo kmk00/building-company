@@ -1,0 +1,25 @@
+---
+interface Props {
+  lineNumber: number;
+  text: string;
+}
+
+const { lineNumber,text } = Astro.props;
+
+---
+
+<p>{text}</p>
+
+<style define:vars={{lineNumber}}>
+  
+  p {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lineNumber);
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  font-size: 1.6rem;
+  color:brown;
+  text-wrap:balance
+  }
+
+</style>

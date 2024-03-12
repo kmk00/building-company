@@ -1,0 +1,36 @@
+---
+
+import image from '../../assets/img/galleryImage.jpg';
+import H4 from '../Elements/H4.astro';
+import TextParagraph from '../Elements/TextParagraph.astro';
+import TextClampComponent from './TextClampComponent.astro';
+
+interface Props {
+    title: string
+    description: string
+    thumbnail: string
+}
+
+const { title, description, thumbnail } = Astro.props
+
+---
+
+
+<div>
+    <img src={image.src} alt="image">
+    <H4>{title}</H4>
+    <TextClampComponent lineNumber={3} text={description} >
+</div>
+
+
+<style>
+    
+    img{
+        max-width: 100%;
+    }
+
+    p{
+        background-color: cadetblue;
+    }
+
+</style>
