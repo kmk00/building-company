@@ -19,7 +19,6 @@ interface Props {
 }
 
 const { smallTitle, title, text, card } = Astro.props
-
 ---
 
 <section>
@@ -29,15 +28,21 @@ const { smallTitle, title, text, card } = Astro.props
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
     </div>
-    <TestimonialCard stars={card.stars} srcPath={card.srcPath} name={card.name} position={card.position} />
+    <TestimonialCard 
+        stars={card.stars} 
+        srcPath={card.srcPath} 
+        name={card.name} 
+        position={card.position} 
+    />
 </section>
 
 
 <style>
-    section{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding-block: 8rem;
-        justify-content: space-between;
-    }
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 8rem;
+    justify-content: space-between;
+}
+
 </style>

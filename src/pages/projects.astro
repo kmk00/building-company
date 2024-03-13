@@ -18,17 +18,27 @@ projectCards.map((projectCard) => {
 
 <Layout title={secondaryHeader[0].frontmatter.title.toUpperCase()}>
 	<main>
-		<SecondaryHeader title={secondaryHeader[0].frontmatter.title} text={secondaryHeader[0].frontmatter.text} />
+		<SecondaryHeader 
+			title={secondaryHeader[0].frontmatter.title} 
+			text={secondaryHeader[0].frontmatter.text} 
+		/>
 		<div>
-			<PortfolioComponent smallTitle={portfolioComponent[0].frontmatter.smallTitle} title={portfolioComponent[0].frontmatter.title} text={portfolioComponent[0].frontmatter.text} btnLabel={portfolioComponent[0].frontmatter.btnLabel}  />
+			<PortfolioComponent 
+				smallTitle={portfolioComponent[0].frontmatter.smallTitle} 
+				title={portfolioComponent[0].frontmatter.title} 
+				text={portfolioComponent[0].frontmatter.text} 
+				btnLabel={portfolioComponent[0].frontmatter.btnLabel}
+			/>
 		</div>
-		<ProjectCards projectCards={projectCardsArray} />
+		<ProjectCards 
+			projectCards={projectCardsArray} 
+		/>
 	</main>
 </Layout>
 
 
 <style>
-
+	
 div{
 	margin-top: 8rem;
 }

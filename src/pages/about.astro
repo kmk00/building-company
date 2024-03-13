@@ -21,11 +21,33 @@ const videoComponentContent = await Astro.glob('../content/portfolio/VideoElemen
 
 <Layout title="About">
 	<main>
-		<SecondaryHeader title={secondaryHeader[0].frontmatter.title} text={secondaryHeader[0].frontmatter.text} />
-		<IntroductionComponent  title={introductionContent[0].frontmatter.title} text={introductionContent[0].frontmatter.text} smallTitle={introductionContent[0].frontmatter.smallTitle} items={introductionContent[0].frontmatter.items}/>
-		<OurTeamComponent cards={ourTeamContent[0].frontmatter.teamCards} smallTitle={ourTeamContent[0].frontmatter.smallTitle} title={ourTeamContent[0].frontmatter.title} />
-		<QuoteComponent imagePath={quoteContent[0].frontmatter.imagePath} quote={quoteContent[0].frontmatter.quote} cardTitle={quoteContent[0].frontmatter.cardTitle} text={quoteContent[0].frontmatter.text}  />
-		<PortfolioComponent smallTitle={portfolioComponent[0].frontmatter.smallTitle} title={portfolioComponent[0].frontmatter.title} text={portfolioComponent[0].frontmatter.text} btnLabel={portfolioComponent[0].frontmatter.btnLabel}  />
+		<SecondaryHeader 
+			title={secondaryHeader[0].frontmatter.title} 
+			text={secondaryHeader[0].frontmatter.text} 
+		/>
+		<IntroductionComponent 
+			title={introductionContent[0].frontmatter.title} 
+			text={introductionContent[0].frontmatter.text} 
+			smallTitle={introductionContent[0].frontmatter.smallTitle} 
+			items={introductionContent[0].frontmatter.items}
+		/>
+		<OurTeamComponent 
+			cards={ourTeamContent[0].frontmatter.teamCards} 
+			smallTitle={ourTeamContent[0].frontmatter.smallTitle} 
+			title={ourTeamContent[0].frontmatter.title} 
+		/>
+		<QuoteComponent 
+			imagePath={quoteContent[0].frontmatter.imagePath} 
+			quote={quoteContent[0].frontmatter.quote} 
+			cardTitle={quoteContent[0].frontmatter.cardTitle} 
+			text={quoteContent[0].frontmatter.text}  
+		/>
+		<PortfolioComponent 
+			smallTitle={portfolioComponent[0].frontmatter.smallTitle} 
+			title={portfolioComponent[0].frontmatter.title} 
+			text={portfolioComponent[0].frontmatter.text} 
+			btnLabel={portfolioComponent[0].frontmatter.btnLabel}
+		/>
 		<VideoComponent 
 			sourcePath={videoComponentContent[0].frontmatter.sourcePath} 
 			title={videoComponentContent[0].frontmatter.title} 

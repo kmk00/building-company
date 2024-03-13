@@ -14,7 +14,6 @@ interface Props {
 }
 
 const { smallTitle, title, text, btnLabel } = Astro.props
-
 ---
 
 <section>
@@ -23,7 +22,9 @@ const { smallTitle, title, text, btnLabel } = Astro.props
         <H6>{smallTitle}</H6>
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
-        <Button label={btnLabel}  />
+        <Button 
+            label={btnLabel}  
+        />
     </div>
     <div class="image-container">
         <img src={image.src} alt="image">
@@ -46,7 +47,6 @@ section{
     height: 100%;
 }
 
-
 img{
     width: 200px;
     position: absolute;
@@ -56,8 +56,7 @@ img{
 
 img:nth-child(1){
     transform: translateY(40%);
-    z-index: 2;
-    
+    z-index: 2;   
 }
 
 img:nth-child(2){
@@ -69,6 +68,5 @@ img:nth-child(2){
 img:nth-child(3){
     transform: translateX(-60%) translateY(80%);
 }
-
 
 </style>

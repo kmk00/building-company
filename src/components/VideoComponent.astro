@@ -20,30 +20,35 @@ const { reverse, sourcePath, smallTitle, title, text, listElements } = Astro.pro
 
 <div class={`video-container ${reverse && 'reverse-flex'}`}>
     <!-- Video Container -->
-    <Video srcPath={sourcePath} />
+    <Video 
+        srcPath={sourcePath} 
+    />
     <div>
         <H6>{smallTitle}</H6>
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
-        <ItemsList items={listElements} />
+        <ItemsList 
+            items={listElements} 
+        />
     </div>
 </div>
 
 <style>
 
-    .reverse-flex{
-        flex-direction: row-reverse;
-    }
+.reverse-flex{
+    flex-direction: row-reverse;
+}
 
-    .video-container{
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        margin-block: 2rem;
-        align-items: center;
-    }
+.video-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-block: 2rem;
+    align-items: center;
+}
 
-    .video-container > div{
-        width: 50%;
-    }
+.video-container > div{
+    width: 50%;
+}
+
 </style>

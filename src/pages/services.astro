@@ -47,7 +47,12 @@ allServiceCards.map((serviceCard) => {
 				/> 	
 			))
 		}
-		<TestimonialComponent card={ testimonialContent[0].frontmatter.card } smallTitle={testimonialContent[0].frontmatter.smallTitle } title={ testimonialContent[0].frontmatter.title } text={ testimonialContent[0].frontmatter.text } />
+		<TestimonialComponent 
+			card={testimonialContent[0].frontmatter.card} 
+			smallTitle={testimonialContent[0].frontmatter.smallTitle} 
+			title={testimonialContent[0].frontmatter.title} 
+			text={testimonialContent[0].frontmatter.text} 
+			/>
 	</main>
 </Layout>
 

@@ -22,6 +22,8 @@ const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryEl
 			smallTitle={videoComponentContent[0].frontmatter.smallTitle} 
 			listElements={videoComponentContent[0].frontmatter.listElements} 
 		/>
-		<GalleryComponent images={galleryComponentContent[0].frontmatter.images}  />
+		<GalleryComponent 
+			images={galleryComponentContent[0].frontmatter.images}
+		/>
 	</main>
 </Layout>

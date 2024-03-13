@@ -21,13 +21,18 @@ const { smallTitle, title, text, items} = Astro.props
 <section>
     <!-- Introduction Component -->
     <div class="image-container">
-        <Image src={image} alt="image" />
+        <Image 
+            src={image} 
+            alt="image" 
+        />
     </div>
     <div class="text-container">
         <H6>{smallTitle}</H6>
         <H2>{title}</H2>
         {text.map(text => <TextParagraph>{text}</TextParagraph>)}
-        <ItemsList items={items} />
+        <ItemsList 
+            items={items} 
+        />
     </div>
 </section>
 

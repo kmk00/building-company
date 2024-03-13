@@ -49,7 +49,10 @@ allServiceCards.map((serviceCard) => {
 			title={procedureCardsContent[0].frontmatter.title} 
 		   	cards={procedureCardsContent[0].frontmatter.cards} 
    		/>
-		<ImageCarousel client:only images={imagesCarouselContent[0].frontmatter.images} />
+		<ImageCarousel 
+			client:only 
+			images={imagesCarouselContent[0].frontmatter.images} 
+		/>
 		<VideoComponent 
 			sourcePath={videoComponentContent[0].frontmatter.sourcePath} 
 			title={videoComponentContent[0].frontmatter.title} 
@@ -69,7 +72,6 @@ allServiceCards.map((serviceCard) => {
 			title={testimonialContent[0].frontmatter.title} 
 			text={testimonialContent[0].frontmatter.text} 
 		/>
-	
 	</main>
 </Layout>
 
