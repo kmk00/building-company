@@ -3,17 +3,33 @@ import H2 from './Elements/H2.astro';
 import H6 from './Elements/H6.astro';
 import TextParagraph from './Elements/TextParagraph.astro';
 import TestimonialCard from './Home/TestimonialCard.astro';
----
 
+type Card = {
+    srcPath: string
+    name: string
+    position: string
+    stars: number
+}
+
+interface Props {
+    smallTitle: string
+    title: string
+    text: string    
+    card: Card
+}
+
+const { smallTitle, title, text, card } = Astro.props
+
+---
 
 <section>
     <!-- Testimonial Component -->
     <div>
-        <H6>Clients Feedback</H6>
-        <H2>OUR TESTIMONIAL FROM BEST CLIENTS</H2>
-        <TextParagraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</TextParagraph>
+        <H6>{smallTitle}</H6>
+        <H2>{title}</H2>
+        <TextParagraph>{text}</TextParagraph>
     </div>
-    <TestimonialCard stars={4.5} srcPath="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="John Doe" position="Ceo of Company" />
+    <TestimonialCard stars={card.stars} srcPath={card.srcPath} name={card.name} position={card.position} />
 </section>
 
 

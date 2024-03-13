@@ -5,20 +5,49 @@ import ServiceCards from '../components/Elements/ServiceCards.astro';
 import OurWorkProcedureComponent from '../components/OurWorkProcedureComponent.astro';
 import VideoComponent from '../components/VideoComponent.astro';
 import TestimonialComponent from '../components/TestimonialComponent.astro';
+
+const secondaryHeader = await Astro.glob('../content/servicesContent/SecondaryHeader.md');
+const allServiceCards = await Astro.glob('../content/servicesContent/cards/*.md');
+const procedureCardsContent = await Astro.glob('../content/sharedContent/procedureCards.md');
+const videoComponentContent = await Astro.glob('../content/servicesContent/VideoElement-*.md');
+const testimonialContent = await Astro.glob('../content/sharedContent/testimonial.md');
+
+let serviceCardsArray = [];
+
+allServiceCards.map((serviceCard) => {
+	serviceCardsArray.push(serviceCard.frontmatter)
+})
+
 ---
 
 <Layout title="About">
 	<main>
-		<SecondaryHeader title="Our Services" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
+		<SecondaryHeader 
+			title={secondaryHeader[0].frontmatter.title} 
+			text={secondaryHeader[0].frontmatter.text} 
+		/>
 		<div>
-			<ServiceCards />
+			<ServiceCards cards={serviceCardsArray} />
 		</div>
-		<OurWorkProcedureComponent />
-		<VideoComponent />
-		<VideoComponent reverse />
-		<VideoComponent />
-		<VideoComponent reverse />
-		<TestimonialComponent />
+		<OurWorkProcedureComponent 
+		 	smallTitle={procedureCardsContent[0].frontmatter.smallTitle} 
+			title={procedureCardsContent[0].frontmatter.title} 
+			cards={procedureCardsContent[0].frontmatter.cards} 
+		/>
+
+		{
+			videoComponentContent.map((videoModule, index) => (
+				<VideoComponent 
+					reverse={index % 2 === 1}
+					sourcePath={videoModule.frontmatter.sourcePath} 
+					title={videoModule.frontmatter.title} 
+					text={videoModule.frontmatter.text} 
+					smallTitle={videoModule.frontmatter.smallTitle} 
+					listElements={videoModule.frontmatter.listElements} 
+				/> 	
+			))
+		}
+		<TestimonialComponent card={ testimonialContent[0].frontmatter.card } smallTitle={testimonialContent[0].frontmatter.smallTitle } title={ testimonialContent[0].frontmatter.title } text={ testimonialContent[0].frontmatter.text } />
 	</main>
 </Layout>
 

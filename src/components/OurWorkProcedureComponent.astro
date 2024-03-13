@@ -2,11 +2,26 @@
 import H2 from './Elements/H2.astro';
 import H6 from './Elements/H6.astro';
 import ProcedureCards from './Elements/ProcedureCards.astro';
+
+type Card = {
+    src: string;
+    mainText: string;
+    subText: string;
+}
+
+interface Props {
+    smallTitle: string
+    title: string
+    cards: Card[]
+}
+
+const { title, smallTitle, cards } = Astro.props
+
 ---
 
 <section>
     <!-- Our Work Procedure Component -->
-    <H6>HOW WE WORK</H6>
-    <H2>OUR WORK PROCEDURE</H2>
-    <ProcedureCards />
+    <H6>{smallTitle}</H6>
+    <H2>{title}</H2>
+    <ProcedureCards cards={cards} />
 </section>

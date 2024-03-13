@@ -1,13 +1,26 @@
 ---
 import ServiceCard from './ServiceCard.astro';
+
+type Card = {
+    mainText: string;
+    subText: string;
+    accent?: boolean
+}
+
+interface Props {
+    cards: Card[]
+}
+
+const { cards } = Astro.props
+
 ---
 
 <div class="cards">
     <!-- Service Cards -->
     <div class="cards-container">
-        <ServiceCard mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
-        <ServiceCard mainText="HOME DESIGN 3D 2D INTERIOR SERVICE" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." accent />
-        <ServiceCard mainText="HOME DESIGN CONSULTATION" subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." />
+        {
+            cards.map(card => <ServiceCard mainText={card.mainText} subText={card.subText} accent={card.accent} />)
+        }        
     </div>
 </div>
 
