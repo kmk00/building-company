@@ -4,15 +4,25 @@ import SecondaryHeader from '../components/SecondaryHeader.astro';
 import PortfolioComponent from '../components/PortfolioComponent.astro';
 import ProjectCards from '../components/Projects/ProjectCards.astro';
 
+const secondaryHeader = await Astro.glob('../content/projects/SecondaryHeader.md');
+const portfolioComponent = await Astro.glob('../content/projects/PortfolioElement.md');
+const projectCards = await Astro.glob('../content/projects/cards/*.md');
+
+let projectCardsArray = [];
+
+projectCards.map((projectCard) => {
+	projectCardsArray.push(projectCard.frontmatter)
+})
+
 ---
 
-<Layout title="Projects">
+<Layout title={secondaryHeader[0].frontmatter.title.toUpperCase()}>
 	<main>
-		<SecondaryHeader title="Projects" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
+		<SecondaryHeader title={secondaryHeader[0].frontmatter.title} text={secondaryHeader[0].frontmatter.text} />
 		<div>
-			<PortfolioComponent />
+			<PortfolioComponent smallTitle={portfolioComponent[0].frontmatter.smallTitle} title={portfolioComponent[0].frontmatter.title} text={portfolioComponent[0].frontmatter.text} btnLabel={portfolioComponent[0].frontmatter.btnLabel}  />
 		</div>
-		<ProjectCards />
+		<ProjectCards projectCards={projectCardsArray} />
 	</main>
 </Layout>
 

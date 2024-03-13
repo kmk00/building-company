@@ -4,18 +4,26 @@ import H6 from './Elements/H6.astro';
 import TextParagraph from './Elements/TextParagraph.astro';
 import Button from './Elements/Button.astro';
 
-import {Image} from 'astro:assets'
 import image from '../assets/who-we-are-image.jpg';
+
+interface Props {
+    smallTitle: string
+    title: string
+    text: string
+    btnLabel: string
+}
+
+const { smallTitle, title, text, btnLabel } = Astro.props
 
 ---
 
 <section>
     <!-- Portfolio Component -->
     <div class="text-content">
-        <H6>Perfect Partner</H6>
-        <H2>WE HAVE PRIORITY FOR CAN CREATE DREAM HOME DESIGN</H2>
-        <TextParagraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</TextParagraph>
-        <Button label="Portfolio"  />
+        <H6>{smallTitle}</H6>
+        <H2>{title}</H2>
+        <TextParagraph>{text}</TextParagraph>
+        <Button label={btnLabel}  />
     </div>
     <div class="image-container">
         <img src={image.src} alt="image">

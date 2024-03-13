@@ -7,7 +7,6 @@ import GalleryComponent from '../components/Portfolio/GalleryComponent.astro';
 const secondaryHeader = await Astro.glob('../content/portfolio/SecondaryHeader.md');
 const videoComponentContent = await Astro.glob('../content/portfolio/VideoElement.md');
 const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryElement.md');
-console.log(galleryComponentContent[0].frontmatter.images)
 ---
 
 <Layout title={secondaryHeader[0].frontmatter.title}>
@@ -23,10 +22,6 @@ console.log(galleryComponentContent[0].frontmatter.images)
 			smallTitle={videoComponentContent[0].frontmatter.smallTitle} 
 			listElements={videoComponentContent[0].frontmatter.listElements} 
 		/>
-
-		{
-			
-		}
 		<GalleryComponent images={galleryComponentContent[0].frontmatter.images}  />
 	</main>
 </Layout>
