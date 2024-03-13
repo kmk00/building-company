@@ -1,0 +1,11 @@
+---
+images:
+  [
+    "/galleryImage.jpg",
+    "/galleryImage.jpg",
+    "/galleryImage.jpg",
+    "/galleryImage.jpg",
+    "/galleryImage.jpg",
+    "/galleryImage.jpg",
+  ]
+---

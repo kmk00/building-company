@@ -1,10 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import image from "../../assets/who-we-are-image.jpg";
 import CarouselImage from "../Elements/CarouselImage";
 
-function ImageCarousel() {
+interface ImageCarouselProps {
+  images: string[];
+}
+
+function ImageCarousel({ images }: ImageCarouselProps) {
   const sectionStyles = {
     marginBlock: "4rem",
     padding: "1.5rem",
@@ -19,30 +22,11 @@ function ImageCarousel() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 1000, disableOnInteraction: false }}
       >
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselImage src={image.src} alt="Who we are image" />
-        </SwiperSlide>
+        {images.map((image) => (
+          <SwiperSlide key={image}>
+            <CarouselImage src={image} alt="Carousel image" />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
