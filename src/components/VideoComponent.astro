@@ -6,21 +6,26 @@ import TextParagraph from './Elements/TextParagraph.astro';
 import ItemsList from './Elements/ItemsList.astro';
 
 interface Props {
+    sourcePath: string
+    smallTitle: string
+    title: string
+    text: string
+    listElements: string[]
     reverse?: boolean
 }
 
-const { reverse } = Astro.props
+const { reverse, sourcePath, smallTitle, title, text, listElements } = Astro.props
 
 ---
 
 <div class={`video-container ${reverse && 'reverse-flex'}`}>
     <!-- Video Container -->
-    <Video srcPath="https://www.youtube.com/embed/NpEaa2P7qZI" />
+    <Video srcPath={sourcePath} />
     <div>
-        <H6>Trust Us Now</H6>
-        <H2>WHY CHOICE OUR HOME DESIGN INTERIOR SERVICES</H2>
-        <TextParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</TextParagraph>
-        <ItemsList items={["Flexible Time", "Perfect Work", "Client Priority", "Flexible Time","Perfect Work","Client Priority"]} />
+        <H6>{smallTitle}</H6>
+        <H2>{title}</H2>
+        <TextParagraph>{text}</TextParagraph>
+        <ItemsList items={listElements} />
     </div>
 </div>
 

@@ -3,12 +3,30 @@ import Layout from '../layouts/Layout.astro';
 import SecondaryHeader from '../components/SecondaryHeader.astro';
 import VideoComponent from '../components/VideoComponent.astro';
 import GalleryComponent from '../components/Portfolio/GalleryComponent.astro';
+
+const secondaryHeader = await Astro.glob('../content/portfolio/SecondaryHeader.md');
+const videoComponentContent = await Astro.glob('../content/portfolio/VideoElement.md');
+const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryElement.md');
+console.log(galleryComponentContent[0].frontmatter.images)
 ---
 
-<Layout title="About">
+<Layout title={secondaryHeader[0].frontmatter.title}>
 	<main>
-		<SecondaryHeader title="Portfolio Gallery" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
-		<VideoComponent />
-		<GalleryComponent />
+		<SecondaryHeader 
+			title={secondaryHeader[0].frontmatter.title} 
+			text={secondaryHeader[0].frontmatter.text} 
+		/>
+		<VideoComponent 
+			sourcePath={videoComponentContent[0].frontmatter.sourcePath} 
+			title={videoComponentContent[0].frontmatter.title} 
+			text={videoComponentContent[0].frontmatter.text} 
+			smallTitle={videoComponentContent[0].frontmatter.smallTitle} 
+			listElements={videoComponentContent[0].frontmatter.listElements} 
+		/>
+
+		{
+			
+		}
+		<GalleryComponent images={galleryComponentContent[0].frontmatter.images}  />
 	</main>
 </Layout>

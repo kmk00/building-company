@@ -1,13 +1,34 @@
 ---
 import { Image } from 'astro:assets';
 
-import image from '../../assets/img/galleryImage.jpg';
+
+type ImageElement = {
+    srcPath: string
+    altText: string
+}
+
+interface Props {
+    images: ImageElement[]
+}
+
+const { images } = Astro.props
+
 
 ---
 
 
 <section>
-    <div >
+    
+    {images.map((image)=>{
+        return (
+            <div>
+                <Image src={image.srcPath} alt={image.altText} width={600} height={400}/>
+            </div>    
+        )
+    })}
+
+
+    <!-- <div >
         <Image src={image} alt="image" />
     </div>
     <div>
@@ -27,7 +48,7 @@ import image from '../../assets/img/galleryImage.jpg';
     </div>
     <div>
         <Image src={image} alt="image" />
-    </div>
+    </div> -->
 
 </section>
 
