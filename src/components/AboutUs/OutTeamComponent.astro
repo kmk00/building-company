@@ -3,14 +3,31 @@ import H6 from '../Elements/H6.astro';
 import H2 from '../Elements/H2.astro';
 import TeamCards from './TeamCards.astro';
 
+type Card = {
+    image: string
+    name: string
+    surname: string
+    position: string
+    fblink: string
+    twitterlink: string
+    linkedinlink: string
+    accent?: boolean
+}
+
+interface Props {
+    title: string
+    smallTitle: string
+    cards: Card[]
+}
+
+const { title, smallTitle, cards } = Astro.props
+
 ---
 
 
 <section>
-<!-- Out Team Component -->
-
-    <H6>OUR TEAM</H6>
-    <H2>we work with team</H2>
-    <TeamCards />
-
+    <!-- Out Team Component -->
+    <H6>{smallTitle}</H6>
+    <H2>{title}</H2>
+    <TeamCards cards={cards}/>
 </section>

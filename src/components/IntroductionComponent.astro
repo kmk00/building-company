@@ -3,20 +3,31 @@ import H2 from './Elements/H2.astro';
 import H6 from './Elements/H6.astro';
 import TextParagraph from './Elements/TextParagraph.astro';
 import ItemsList from './Elements/ItemsList.astro';
-import image from '../assets/who-we-are-image.jpg';
 import {Image} from 'astro:assets'
+import image from '../assets/img/galleryImage.jpg'
+
+interface Props {
+    smallTitle: string
+    title: string
+    text: string[]
+    items: string[]
+}
+
+const { smallTitle, title, text, items} = Astro.props
+
 
 ---
 
 <section>
     <!-- Introduction Component -->
-    <Image src={image} alt="image" />
+    <div class="image-container">
+        <Image src={image} alt="image" />
+    </div>
     <div class="text-container">
-        <H6>WHO WE ARE</H6>
-        <H2>WE ARE PERFECT TEAM FOR HOME INTERIOR DECORATION</H2>
-        <TextParagraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</TextParagraph>
-        <TextParagraph>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</TextParagraph>
-        <ItemsList items={["Flexible Time", "Perfect Work", "Client Priority", "Flexible Time","Perfect Work","Client Priority"]} />
+        <H6>{smallTitle}</H6>
+        <H2>{title}</H2>
+        {text.map(text => <TextParagraph>{text}</TextParagraph>)}
+        <ItemsList items={items} />
     </div>
 </section>
 
@@ -26,11 +37,16 @@ import {Image} from 'astro:assets'
 section{
     display: flex;
     padding: 6.8rem;
+}
 
+.image-container img{
+    padding-block: 2rem;
+    width: 700px;
+    height: 500px;
 }
 
 .text-container{
-    padding: 4.6rem;
+    padding: 0 4.6rem;
 }
 
 </style>
