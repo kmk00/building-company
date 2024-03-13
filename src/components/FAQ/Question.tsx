@@ -9,7 +9,6 @@ function Question({ question, answer }: { question: string; answer: string }) {
 
   const questionContainerStyles = {
     padding: "1rem",
-    width: "60%",
     fontSize: "1.8rem",
     gap: "1rem",
     border: "1px solid gray",

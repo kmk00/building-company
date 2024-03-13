@@ -5,22 +5,34 @@ import H2 from '../Elements/H2.astro';
 import TextParagraph from '../Elements/TextParagraph.astro';
 import QuestionList from './QuestionList.astro';
 
+type QnA = {
+    question: string;
+    answer: string;
+}
+
+interface Props {
+    questionArray: QnA[]
+    smallTitle: string
+    title: string
+    text: string
+}
+
+const { questionArray, smallTitle, title, text } = Astro.props
 
 ---
 
 <section>
 <!-- Question Component -->
-    <H6>first question answer</H6>
-    <H2>QUESTION ANSWER TRENDING WEEKLY</H2>
-    <TextParagraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</TextParagraph>
-    <QuestionList questions={[{question: "first question", answer: "first answer"}, {question: "second question", answer: "second answer"}, {question: "third question", answer: "third answer"}]} />
-
+    <H6>{smallTitle}</H6>
+    <H2>{title}</H2>
+    <TextParagraph>{text}</TextParagraph>
+    <QuestionList questions={questionArray} />
 </section>
 
 <style>
 
 section{
-    padding: 4rem;
+    padding: 0 4rem;
 }
 
 </style>

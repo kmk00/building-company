@@ -3,25 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import SecondaryHeader from '../components/SecondaryHeader.astro';
 import QuestionComponent from '../components/FAQ/QuestionComponent.astro';
 import { Image } from 'astro:assets';
-import image from '../assets/img/galleryImage.jpg';
 
+const allQuestions = await Astro.glob('../content/faq/questions/*.md');
+const secondaryHeader = await Astro.glob('../content/faq/SecondaryHeader.md');
 ---
 
-<Layout title="FAQ">
+<Layout title={secondaryHeader[0].frontmatter.title}>
 	<main>
-		<SecondaryHeader title="FAQ" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " />
-        <div>
-            <div class="image-container">
-                <Image src={image} width={600} height={400} alt="image" />
+		<SecondaryHeader title={secondaryHeader[0].frontmatter.title} text={secondaryHeader[0].frontmatter.text} />
+        
+        {allQuestions && allQuestions.map((question) => (
+            <div>
+                <div class="image-container">
+                    <Image src={question.frontmatter.imageUrl} width={600} height={400} alt="image" />
+                </div>
+                <QuestionComponent questionArray={question.frontmatter.questionArray} smallTitle={question.frontmatter.smallTitle} title={question.frontmatter.title} text={question.frontmatter.text} />
             </div>
-            <QuestionComponent />
-        </div>
-        <div>
-            <div class="image-container">
-                <Image src={image} width={600} height={400} alt="image" />
-            </div>
-            <QuestionComponent />
-        </div>
+        ))}
 	</main>
 </Layout>
 
@@ -30,12 +28,15 @@ import image from '../assets/img/galleryImage.jpg';
 
 main > div{
     display: flex;
+    align-items: center;
     padding-block: 4rem;
 }
 
 main > div:nth-child(2n + 1){
     flex-direction: row-reverse;
 }
+
+
 
 
 
