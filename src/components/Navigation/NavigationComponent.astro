@@ -4,7 +4,9 @@ import Navigation from './Navigation.astro';
 ---
 
 <header>
-    <Logo />
+    <div class="logo">
+        <Logo />
+    </div>
     <Navigation />
 </header>
 
@@ -16,7 +18,13 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 2.8rem;
+    border-bottom: 1px solid var(--background-color);
 }
 
+@media screen and (max-width: 900px) {
+    .logo{
+        display: none;
+    }
+}
 
 </style>
