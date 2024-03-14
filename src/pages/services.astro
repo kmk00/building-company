@@ -20,12 +20,12 @@ allServiceCards.map((serviceCard) => {
 
 ---
 
-<Layout title="About">
+<Layout title={secondaryHeader[0].frontmatter.title.toUpperCase()}>
+	<SecondaryHeader 
+		title={secondaryHeader[0].frontmatter.title} 
+		text={secondaryHeader[0].frontmatter.text} 
+	/>
 	<main>
-		<SecondaryHeader 
-			title={secondaryHeader[0].frontmatter.title} 
-			text={secondaryHeader[0].frontmatter.text} 
-		/>
 		<div>
 			<ServiceCards cards={serviceCardsArray} />
 		</div>

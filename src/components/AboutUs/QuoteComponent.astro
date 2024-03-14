@@ -1,5 +1,6 @@
 ---
 import H1 from '../Elements/H1.astro';
+import H2 from '../Elements/H2.astro';
 import ProcedureCard from '../Elements/ProcedureCard.astro';
 
 interface Props {
@@ -16,8 +17,10 @@ const { quote, cardTitle, text, imagePath } = Astro.props
 
 <section>
     <!-- Quote Component -->
-    <ProcedureCard src={imagePath} mainText={cardTitle} subText={text} />
-    <H1>"{quote}"</H1>
+    <ProcedureCard src={imagePath} mainText={cardTitle} subText={text} primary />
+    <div>
+        <H2>"{quote}"</H2>
+    </div>
 
 </section>
 
@@ -26,10 +29,17 @@ const { quote, cardTitle, text, imagePath } = Astro.props
 <style>
 
 section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 6.8rem;
-    justify-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
+
+div{
+    flex-basis: 600px;
+    flex-grow: 9999;
+    text-align: center
+}
+
 </style>

@@ -27,7 +27,7 @@ allServiceCards.map((serviceCard) => {
 
 ---
 
-<Layout title="Home">
+<Layout title={heroContent[0].frontmatter.title.toUpperCase()}>
 	<Hero 
 		title={heroContent[0].frontmatter.title} 
 		smallTitle={heroContent[0].frontmatter.smallTitle} 

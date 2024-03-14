@@ -25,7 +25,8 @@ const { smallTitle, title, text, btnLabel } = Astro.props
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
         <Button 
-            label={btnLabel}  
+            label={btnLabel} 
+            textColor='var(--background-color)' backgroundColor='var(--accent-color)' 
         />
     </div>
     <div class="image-container">

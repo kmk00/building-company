@@ -33,19 +33,13 @@ const { cards } = Astro.props
 <style>
 
 div{
-    max-width: 80%;
+    max-width: 100%;
     margin-inline: auto;
     margin-top: 2rem;
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-items: center;
-}
-
-@media screen and (max-width: 600px) {
-    div{
-        max-width: 100%;
-    }
 }
 
 </style>

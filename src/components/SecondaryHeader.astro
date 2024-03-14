@@ -16,7 +16,9 @@ const { title, text } = Astro.props
     <!-- Hero Section -->
     <div class="hero-content">
         <H1>{title}</H1>
-        <TextParagraph>{text}</TextParagraph>
+        <div>
+            <TextParagraph>{text}</TextParagraph>
+        </div>
     </div>
 </section>
 
@@ -25,23 +27,28 @@ const { title, text } = Astro.props
 section{
     background-color: var(--secondary-color);
     padding-block: 4rem;
+    
 }
 
 div{
     padding-top: 2rem;
     padding-bottom: 6rem;
-    container-type: inline-size;
-    container-name: hero-text;
 }
 
 .hero-content{
-    max-width: 60%;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
-@container hero-text (max-width: 1100px) {
+.hero-content > div{
+    max-width: 60%;
+}
+
+
+@media (max-width: 1100px) {
     
-    .hero-content{
+    .hero-content > div{
         max-width: 100%;
     }
 
