@@ -9,22 +9,19 @@ const secondaryHeader = await Astro.glob('../content/faq/SecondaryHeader.md');
 ---
 
 <Layout title={secondaryHeader[0].frontmatter.title}>
-	<main>
-		<SecondaryHeader 
-            title={secondaryHeader[0].frontmatter.title} 
-            text={secondaryHeader[0].frontmatter.text} 
-        />
-        
+    <SecondaryHeader 
+        title={secondaryHeader[0].frontmatter.title} 
+        text={secondaryHeader[0].frontmatter.text} 
+    />
+	<main>  
         {allQuestions && allQuestions.map((question) => (
             <div>
-                <div class="image-container">
-                    <Image 
-                        src={question.frontmatter.imageUrl} 
-                        width={600} 
-                        height={400} 
-                        alt="image" 
-                    />
-                </div>
+                <Image
+                    width={360}
+                    height={270}
+                    src={question.frontmatter.imageUrl} 
+                    alt="image" 
+                />
                 <QuestionComponent 
                     questionArray={question.frontmatter.questionArray} 
                     smallTitle={question.frontmatter.smallTitle} 
@@ -42,7 +39,10 @@ const secondaryHeader = await Astro.glob('../content/faq/SecondaryHeader.md');
 main > div{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-block: 4rem;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
 main > div:nth-child(2n + 1){

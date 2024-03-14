@@ -10,11 +10,11 @@ const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryEl
 ---
 
 <Layout title={secondaryHeader[0].frontmatter.title}>
+	<SecondaryHeader 
+		title={secondaryHeader[0].frontmatter.title} 
+		text={secondaryHeader[0].frontmatter.text} 
+	/>
 	<main>
-		<SecondaryHeader 
-			title={secondaryHeader[0].frontmatter.title} 
-			text={secondaryHeader[0].frontmatter.text} 
-		/>
 		<VideoComponent 
 			sourcePath={videoComponentContent[0].frontmatter.sourcePath} 
 			title={videoComponentContent[0].frontmatter.title} 
