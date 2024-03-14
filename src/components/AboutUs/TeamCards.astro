@@ -25,7 +25,7 @@ const { cards } = Astro.props
 <div>
     {cards.map((card)=>{
         return (
-            <TeamCard image={card.image} name={card.name} surname={card.surname}  position={card.position} fblink={card.fblink} twitterlink={card.twitterlink} linkedinlink={card.linkedinlink} />
+            <TeamCard image={card.image} name={card.name} surname={card.surname}  position={card.position} fblink={card.fblink} twitterlink={card.twitterlink} linkedinlink={card.linkedinlink} accent={card.accent}  />
         )
     })}
 </div>
@@ -40,6 +40,12 @@ div{
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    div{
+        max-width: 100%;
+    }
 }
 
 </style>

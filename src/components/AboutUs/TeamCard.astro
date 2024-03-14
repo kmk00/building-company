@@ -36,7 +36,7 @@ const { image, name, surname, position, fblink, twitterlink, linkedinlink,accent
 <style>
 
 .accent{
-    background-color: 
+    background-color: var(--secondary-color) !important;
 }
 
 .card{
@@ -46,14 +46,15 @@ const { image, name, surname, position, fblink, twitterlink, linkedinlink,accent
     align-items: center;
     gap: 4rem;
     padding: 2.4rem 3.2rem;
+    background-color: var(--primary-color);
 }
 
 p:nth-child(2){
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 p:nth-child(3){
-    font-size: 2.4rem;
+    font-size: 2.6rem;
 }
 
 p{
@@ -67,6 +68,12 @@ p{
 
 img{
     max-width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    img{
+        max-width: 150px;
+    }
 }
 
 </style>
