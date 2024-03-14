@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import SecondaryHeader from '../components/SecondaryHeader.astro';
 import VideoComponent from '../components/VideoComponent.astro';
-import GalleryComponent from '../components/Portfolio/GalleryComponent.astro';
+import ImageCarousel from '../components/Portfolio/ImageCarousel.tsx';
 
 const secondaryHeader = await Astro.glob('../content/portfolio/SecondaryHeader.md');
 const videoComponentContent = await Astro.glob('../content/portfolio/VideoElement.md');
-const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryElement.md');
+const imagesCarouselContent = await Astro.glob('../content/home/ImageCarousel.md');
+
 ---
 
 <Layout title={secondaryHeader[0].frontmatter.title}>
@@ -22,8 +23,9 @@ const galleryComponentContent = await Astro.glob('../content/portfolio/GalleryEl
 			smallTitle={videoComponentContent[0].frontmatter.smallTitle} 
 			listElements={videoComponentContent[0].frontmatter.listElements} 
 		/>
-		<GalleryComponent 
-			images={galleryComponentContent[0].frontmatter.images}
+		<ImageCarousel 
+			client:only 
+			images={imagesCarouselContent[0].frontmatter.images} 
 		/>
 	</main>
 </Layout>
