@@ -1,14 +1,13 @@
 ---
-
-import image from '../../assets/img/galleryImage.jpg';
+import { Image } from 'astro:assets';
 import H4 from '../Elements/H4.astro';
-import TextParagraph from '../Elements/TextParagraph.astro';
 import TextClampComponent from './TextClampComponent.astro';
 
 interface Props {
     title: string
     description: string
     thumbnail: string
+    date: string
 }
 
 const { title, description, thumbnail } = Astro.props
@@ -16,21 +15,39 @@ const { title, description, thumbnail } = Astro.props
 ---
 
 
-<div>
-    <img src={image.src} alt="image">
-    <H4>{title}</H4>
-    <TextClampComponent lineNumber={3} text={description} >
+<div class="card">
+    <a href=`/blog/${title}`>
+        <div>
+            <Image src={thumbnail} alt="image" width={300} height={200} />
+        </div>
+        <H4>{title}</H4>
+        <TextClampComponent lineNumber={3} text={description} >
+    </a>
 </div>
 
 
 <style>
     
-    img{
-        max-width: 100%;
+    .card{
+        transition: all 0.5s;
     }
 
-    p{
-        background-color: cadetblue;
+    .card:hover{
+        transform: scale(1.02);
+        transition: 0.5s;
+
     }
+
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+
+    .img{
+        width: 300px;
+        height: 200px;
+    }
+        
 
 </style>

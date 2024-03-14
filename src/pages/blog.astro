@@ -1,70 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SecondaryHeader from '../components/SecondaryHeader.astro';
-import PostsComponents from '../components/Blog/PostsComponents.astro';
+import PostCard from '../components/Blog/PostCard.astro';
 
-const posts = [
-	{
-		title: "Post 1",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 2",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 3",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 4",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 1",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 2",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 3",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 4",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 1",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 2",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi v blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 3",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	},
-	{
-		title: "Post 4",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis.",
-		thumbnail: "../assets/img/galleryImage.jpg"
-	}
-]
+const allPosts = await Astro.glob('../content/blog/*.md');
 
 ---
 
@@ -74,8 +13,24 @@ const posts = [
 		text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. " 
 	/>
 	<main>
-        <PostsComponents 
-			posts={posts} 
-		/>
+
+		{
+			allPosts.map((post) => (
+				<PostCard title={post.frontmatter.title} description={post.frontmatter.description} thumbnail={post.frontmatter.thumbnail} date={post.frontmatter.date} />
+			))
+		}
+
 	</main>
 </Layout>
+
+<style>
+
+main{
+	margin-top: 2rem;
+	display: grid;
+	gap: 4rem;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	justify-items: center;
+}
+
+</style>
