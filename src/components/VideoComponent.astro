@@ -18,20 +18,20 @@ const { reverse, sourcePath, smallTitle, title, text, listElements } = Astro.pro
 
 ---
 
-<div class={`video-container ${reverse && 'reverse-flex'}`}>
+<section class={`video-container ${reverse && 'reverse-flex'}`}>
     <!-- Video Container -->
-    <Video 
-        srcPath={sourcePath} 
-    />
     <div>
         <H6>{smallTitle}</H6>
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
         <ItemsList 
-            items={listElements} 
+        items={listElements} 
         />
     </div>
-</div>
+    <Video 
+        srcPath={sourcePath} 
+    />
+</section>
 
 <style>
 
@@ -41,14 +41,15 @@ const { reverse, sourcePath, smallTitle, title, text, listElements } = Astro.pro
 
 .video-container{
     display: flex;
-    justify-content: space-between;
+    flex-wrap:wrap;
     gap: 2rem;
     margin-block: 2rem;
     align-items: center;
 }
 
 .video-container > div{
-    width: 50%;
+    flex-basis: 600px;
+    flex-grow: 1;
 }
 
 </style>

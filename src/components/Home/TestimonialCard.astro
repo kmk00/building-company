@@ -1,21 +1,20 @@
 
 ---
+import H6 from '../Elements/H6.astro'
 import TextParagraph from '../Elements/TextParagraph.astro'
 
 
 interface Props {
-    stars: number,
     srcPath: string,
     name: string,
     position: string
 }
 
-const { stars, srcPath, name, position } = Astro.props
-
+const {srcPath, name, position } = Astro.props
 ---
 
 <div class="card-component">
-    {stars}
+    <H6>⭐️⭐️⭐️⭐️⭐️</H6>
     <TextParagraph>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</TextParagraph>
     <div>
         <img src={srcPath} width="80" height="80" alt="image">
@@ -30,9 +29,11 @@ const { stars, srcPath, name, position } = Astro.props
 <style>
 
 .card-component{
-    border: 1px solid #f5f5f5;
+    flex-basis: 700px;
+    border: 1px solid var(--accent-color);
     padding: 3rem;
-    box-shadow: 0 1px 10px #000;
+    flex-grow: 1;
+    background-color: var(--secondary-color);
 }
 
 .card-component > div{

@@ -28,13 +28,13 @@ allServiceCards.map((serviceCard) => {
 ---
 
 <Layout title="Home">
+	<Hero 
+		title={heroContent[0].frontmatter.title} 
+		smallTitle={heroContent[0].frontmatter.smallTitle} 
+		text={heroContent[0].frontmatter.text} 
+		btnLabel={heroContent[0].frontmatter.btnLabel} 
+	/>
 	<main>
-		<Hero 
-			title={heroContent[0].frontmatter.title} 
-			smallTitle={heroContent[0].frontmatter.smallTitle} 
-			text={heroContent[0].frontmatter.text} 
-			btnLabel={heroContent[0].frontmatter.btnLabel} 
-		/>
 		<ServiceCards 
 			cards={serviceCardsArray} 
 		/>
@@ -43,16 +43,17 @@ allServiceCards.map((serviceCard) => {
 			text={introductionContent[0].frontmatter.text} 
 			smallTitle={introductionContent[0].frontmatter.smallTitle} 
 			items={introductionContent[0].frontmatter.items}
-		/>
+			/>
 		<OurWorkProcedureComponent 
 			smallTitle={procedureCardsContent[0].frontmatter.smallTitle} 
 			title={procedureCardsContent[0].frontmatter.title} 
-		   	cards={procedureCardsContent[0].frontmatter.cards} 
-   		/>
+			cards={procedureCardsContent[0].frontmatter.cards} 
+		/>
 		<ImageCarousel 
 			client:only 
 			images={imagesCarouselContent[0].frontmatter.images} 
 		/>
+			
 		<VideoComponent 
 			sourcePath={videoComponentContent[0].frontmatter.sourcePath} 
 			title={videoComponentContent[0].frontmatter.title} 
@@ -71,7 +72,7 @@ allServiceCards.map((serviceCard) => {
 			smallTitle={testimonialContent[0].frontmatter.smallTitle} 
 			title={testimonialContent[0].frontmatter.title} 
 			text={testimonialContent[0].frontmatter.text} 
-		/>
+		/> 
 	</main>
 </Layout>
 

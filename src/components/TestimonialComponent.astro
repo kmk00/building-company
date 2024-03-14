@@ -23,26 +23,42 @@ const { smallTitle, title, text, card } = Astro.props
 
 <section>
     <!-- Testimonial Component -->
+    <TestimonialCard 
+        srcPath={card.srcPath} 
+        name={card.name} 
+        position={card.position} 
+    />
     <div>
         <H6>{smallTitle}</H6>
         <H2>{title}</H2>
         <TextParagraph>{text}</TextParagraph>
     </div>
-    <TestimonialCard 
-        stars={card.stars} 
-        srcPath={card.srcPath} 
-        name={card.name} 
-        position={card.position} 
-    />
 </section>
 
 
 <style>
+
+div{
+    flex-basis: 600px;
+    flex-grow: 9999;
+}
+
 section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-block: 8rem;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap:0 20rem;
+}
+
+@media screen and (max-width: 1539px) {
+    section{
+        flex-direction: row-reverse;
+    }
+
+    div{
+        order: -1;
+    }
+
 }
 
 </style>

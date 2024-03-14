@@ -3,18 +3,18 @@ interface Props {
     label: string;
     action?: () => void;
     href?: string;
+    textColor?: string;
+    backgroundColor?: string; 
 }
 
-const { label, action, href } = Astro.props;
+const { label, action, href, textColor, backgroundColor } = Astro.props;
 ---
 
-<button>{label}</button>
+<button style={`color: ${textColor}; background-color: ${backgroundColor}`}>{label}</button>
 
 
 <style>
     button{
-        background-color: black;
-        color: white;
         border: none;
         padding: 1.4rem 2.4rem;
         font-size: 1.4rem;

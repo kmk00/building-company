@@ -22,11 +22,15 @@ const { title, smallTitle, text, btnLabel } = Astro.props
         <H6>{smallTitle}</H6>
         <H1>{title}</H1>
         <TextParagraph>{text}</TextParagraph>
-        <Button label={btnLabel} />
+        <Button label={btnLabel} textColor="var(--primary-color)" backgroundColor="var(--background-color)" />
     </div>
 </section>
 
 <style>
+
+section{
+    background-color: var(--secondary-color);
+}
 
 div{
     padding-top: 2rem;
@@ -37,12 +41,14 @@ div{
 
 .hero-content{
     max-width: 60%;
+    margin-inline: auto;
 }
 
-@container hero-text (max-width: 1100px) {
+@media screen and (max-width: 760px){
     
     .hero-content{
         max-width: 100%;
+        margin-inline: 2rem;
     }
     
 }

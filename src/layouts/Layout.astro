@@ -19,13 +19,21 @@ const { title } = Astro.props;
 		<title>HOMCO | {title}</title>
 	</head>
 	<body>
-		<NavigationComponent />
+		<!-- <NavigationComponent /> -->
 		<slot />	
 	</body>
-	<Footer />
+	<!-- <Footer /> -->
 </html>
 
 <style is:global>
+
+:root{
+	--accent-color: #8d9fbb;
+	--text-color: #0c1314;
+	--background-color: #f7fafa;
+	--primary-color: #629ba2;
+	--secondary-color: #adbecf;
+}
 
 *, *::before, *::after{
 	margin: 0;
@@ -35,7 +43,7 @@ const { title } = Astro.props;
 
 html{
 	font-family: 'Poppins', sans-serif;
-	background-color: rgb(232, 238, 238);
+	background-color: var(--background-color);
 	font-size: 62.5%;
 	overflow-x: hidden;
 }
@@ -44,6 +52,28 @@ main{
 	max-width: 1600px;
 	margin:auto;
 	padding: 2rem;
+}
+
+section{
+	padding-block: 6rem;
+}
+
+@media screen and (max-width: 1454px) {
+	section{
+		padding-block: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html{
+		font-size: 57%;
+	}
+}
+
+@media screen and (max-width: 438px) {
+	html{
+		font-size: 46%;
+	}
 }
 
 </style>
