@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SecondaryHeader from '../../components/SecondaryHeader.astro';
+import H6 from '../../components/Elements/H6.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+
+    const allPosts = await Astro.glob('../../content/blog/*.md');
+
+    
+    return allPosts.map((post) => {
+        return {
+            params: {
+                slug: post.frontmatter.slug
+            },
+            props: {
+                post
+            }
+        }
+    })
+}
+
+const { post } = Astro.props
+
+---
+
+
+
+<Layout title={post.frontmatter.title}>
+    <SecondaryHeader 
+        title={post.frontmatter.title}
+        text={post.frontmatter.description}
+    />
+    <main>
+        <section>
+            <div class="post-image">
+                <Image src={post.frontmatter.thumbnail} width={500} height={300} alt="image" />
+            </div>
+            <div class="post-content" style="background-color:;" set:html={post.compiledContent()}/>
+        </section>
+        <H6>Created: {post.frontmatter.date}</H6>
+    </main>
+</Layout>
+
+<style>
+
+
+
+</style>
+
+

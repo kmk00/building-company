@@ -4,19 +4,20 @@ import H4 from '../Elements/H4.astro';
 import TextClampComponent from './TextClampComponent.astro';
 
 interface Props {
+    slug: string
     title: string
     description: string
     thumbnail: string
     date: string
 }
 
-const { title, description, thumbnail } = Astro.props
+const { title, description, thumbnail, date, slug } = Astro.props
 
 ---
 
 
 <div class="card">
-    <a href=`/blog/${title}`>
+    <a href=`/blog/${slug}`>
         <div>
             <Image src={thumbnail} alt="image" width={300} height={200} />
         </div>

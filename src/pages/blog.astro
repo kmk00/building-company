@@ -16,7 +16,7 @@ const allPosts = await Astro.glob('../content/blog/*.md');
 
 		{
 			allPosts.map((post) => (
-				<PostCard title={post.frontmatter.title} description={post.frontmatter.description} thumbnail={post.frontmatter.thumbnail} date={post.frontmatter.date} />
+				<PostCard slug={post.frontmatter.slug} title={post.frontmatter.title} description={post.frontmatter.description} thumbnail={post.frontmatter.thumbnail} date={post.frontmatter.date} />
 			))
 		}
 
