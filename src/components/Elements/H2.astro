@@ -1,7 +1,15 @@
+---
+interface Props {
+    color?: string
+}
+
+const { color } = Astro.props
+---
+
 <h2><slot /></h2>
 
 
-<style>
+<style define:vars={{color}}>
 
 h2{
     font-size: 3.6rem;
@@ -9,6 +17,7 @@ h2{
     text-transform: uppercase;
     letter-spacing: 2px;
     text-wrap: balance;
+    color: var(--color);
 }
 
 </style>

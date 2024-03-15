@@ -9,7 +9,7 @@ import ContactMenu from './ContactMenu.astro';
 
 
 <div>
-    <Information />
+    <Information color='var(--background-color)' />
     <FooterNavigation />
     <ContactMenu />
 </div>
@@ -20,8 +20,16 @@ import ContactMenu from './ContactMenu.astro';
 div{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
+
     gap: 1rem;
     text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+    div{
+        grid-template-columns: 1fr;
+
+    }
 }
 
 </style>

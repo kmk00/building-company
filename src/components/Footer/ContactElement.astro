@@ -4,20 +4,22 @@ interface Props {
     src: string
     alt: string
     mainText: string
+    color?: string
 }
 
-const { src, alt, mainText } = Astro.props
+const { src, alt, mainText, color } = Astro.props
 
 import Icon from '../Elements/Icon.astro';
+import TextParagraph from '../Elements/TextParagraph.astro'
 
 ---
 
 <div>
     <Icon alt={alt} src={src} />
-    <p>{mainText}</p>
+    <TextParagraph>{mainText}</TextParagraph>
 </div>
 
-<style>
+<style define:vars={{color}}>
 
 div{
     display: flex;
@@ -29,7 +31,7 @@ div{
 
 p{
     font-size: 1.6rem;
-    color: 
+    color: var(--color);
 }
 
 </style>

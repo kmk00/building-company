@@ -1,16 +1,15 @@
 ---
 import H4 from '../Elements/H4.astro';
-import NavigationItem from '../Navigation/NavigationItem.astro';
 ---
 
 
 <div>
-    <H4>FOOTER NAVIGATION</H4>
+    <H4 color='var(--background-color)'>FOOTER NAVIGATION</H4>
     <ul>
-        <li><NavigationItem href="/" label="Home"></li>
-        <li><NavigationItem href="/about" label="About Us"></li>
-        <li><NavigationItem href="/services" label="Services"></li>
-        <li><NavigationItem href="/projects" label="Home">Project</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/projects">Projects</a></li>
     </ul>
 </div>
 
@@ -20,14 +19,17 @@ import NavigationItem from '../Navigation/NavigationItem.astro';
 
 li{
     font-size: 2.4rem;
-    list-style: none;
-    padding-block: 0.4rem;
+    padding-block: 0.8rem;
     display: flex;
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: var(--background-color);
+}
+
 li::before{
-    content: '>';
     padding: 0.4rem;
 }
 

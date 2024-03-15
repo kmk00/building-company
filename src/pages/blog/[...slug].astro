@@ -35,18 +35,12 @@ const { post } = Astro.props
     <main>
         <section>
             <div class="post-image">
-                <Image src={post.frontmatter.thumbnail} width={500} height={300} alt="image" />
+                <Image src={post.frontmatter.thumbnail} width={300} height={200} alt="image" />
             </div>
             <div class="post-content" style="background-color:;" set:html={post.compiledContent()}/>
         </section>
         <H6>Created: {post.frontmatter.date}</H6>
     </main>
 </Layout>
-
-<style>
-
-
-
-</style>
 
 

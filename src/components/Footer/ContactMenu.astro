@@ -10,13 +10,15 @@ import locationIcon from '../../assets/location-pin.svg'
 ---
 
 <div>
-    <H4>CONTACT US</H4>
+    <H4 color='var(--background-color)'>CONTACT US</H4>
     <ContactElement 
+        color='var(--background-color)'
         alt="Location" 
         src={locationIcon.src} 
         mainText="Lumbung Hidup East Java"
     />
     <ContactElement 
+        color='var(--background-color)'
         alt="Mail" 
         src={mailIcon.src} 
         mainText="Hello@Homco.com"
@@ -24,3 +26,10 @@ import locationIcon from '../../assets/location-pin.svg'
     <NewsletterForm />
 </div>
 
+<style>
+
+div{
+    max-width: 28rem;
+}
+
+</style>
