@@ -1,4 +1,4 @@
 ---
 title: "portfolio"
-text: "Portfolio sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. "
+text: "Browse through our gallery to witness the diverse range of construction endeavors we've undertaken, from elegant residential renovations to groundbreaking industrial developments. Each project is a testament to our commitment to excellence, innovation, and client satisfaction."
 ---
