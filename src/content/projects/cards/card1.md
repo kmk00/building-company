@@ -1,6 +1,11 @@
 ---
 image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-title: "Project 1"
-listElements: ["Office Meeting", "Working Time Call", "Come to Place"]
-btnLabel: "Contact Us"
+title: "Modern Residence Renovation"
+listElements:
+  [
+    "Open Concept Living Spaces",
+    "Luxurious Kitchen Remodel",
+    "Spa-Inspired Master Bathroom",
+  ]
+btnLabel: "Explore Renovation Details"
 ---

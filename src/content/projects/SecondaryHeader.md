@@ -1,4 +1,4 @@
 ---
 title: "projects"
-text: "PROJECTS Portfolio sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. "
+text: "Explore a collection of our proudest achievements, spanning residential, commercial, and industrial construction endeavors. Each project tells a unique story of collaboration, innovation, and dedication to excellence. From elegant home renovations to iconic commercial developments and robust industrial infrastructure, our portfolio reflects our commitment to delivering exceptional results that surpass expectations."
 ---
