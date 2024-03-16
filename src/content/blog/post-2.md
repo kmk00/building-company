@@ -3,7 +3,7 @@ slug: "navigating-the-renovation-process"
 title: "Navigating the Renovation Process"
 description: "Embarking on a home renovation project can be an exciting yet daunting endeavor."
 date: 14.03.2024
-thumbnail: "/galleryImage.jpg"
+thumbnail: "/gallery2.webp"
 ---
 
 Embarking on a home renovation project can be an exciting yet daunting endeavor. From conceptualizing your vision to managing budgets and timelines, there are many factors to consider to ensure a successful outcome. In this blog post, we'll share valuable tips for navigating the renovation process and turning your dream home into a reality.

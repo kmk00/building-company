@@ -36,7 +36,6 @@ const { post } = Astro.props
         <section>
             <div class="post-image">
                 <img src={post.frontmatter.thumbnail} alt="image" />
-                <img src={post.frontmatter.thumbnail} alt="image" />
             </div>
             <div class="post-content" style="background-color:;" set:html={post.compiledContent()}/>
         </section>

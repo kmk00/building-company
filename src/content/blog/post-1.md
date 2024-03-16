@@ -3,7 +3,7 @@ slug: "the-future-of-construction"
 title: "The Future of Construction"
 description: "Innovation is reshaping the construction industry at a rapid pace, with emerging technologies and evolving trends revolutionizing how we design, build, and inhabit structures."
 date: "14-03-2024"
-thumbnail: "/galleryImage.jpg"
+thumbnail: "/gallery1.webp"
 ---
 
 In recent years, the construction industry has undergone a significant shift towards sustainability, driven by a growing awareness of environmental concerns and the need for more responsible building practices. In this blog post, we'll explore the future of sustainable construction and the innovative technologies and strategies shaping the industry.
@@ -27,3 +27,5 @@ Digital technology is playing an increasingly important role in sustainable cons
 ## Conclusion:
 
 The future of sustainable construction is bright, with continued advancements in green building materials, energy-efficient design, innovative construction techniques, and digital technology. By embracing sustainability, the construction industry has the opportunity to not only reduce its environmental footprint but also create healthier, more resilient, and more comfortable buildings for generations to come.
+
+![post-image](/public/gallery4.webp?raw=true "Image 1")

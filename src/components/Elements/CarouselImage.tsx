@@ -5,8 +5,8 @@ interface CarouselImageProps {
 
 function CarouselImage({ src, alt }: CarouselImageProps) {
   return (
-    <div>
-      <img src={src} width={"100%"} height={"100%"} alt={alt} />
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <img src={src} width={"60%"} height={"60%"} alt={alt} />
     </div>
   );
 }

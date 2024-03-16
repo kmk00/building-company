@@ -17,5 +17,5 @@ questionArray:
       answer: "At Elevate Build, we pride ourselves on our commitment to quality craftsmanship, attention to detail, and exceptional customer service. Our team works tirelessly to ensure that every residential construction project exceeds our clients' expectations, delivering results that stand the test of time.",
     },
   ]
-imageUrl: "/galleryImage.jpg"
+imageUrl: "/gallery1.webp"
 ---

@@ -17,5 +17,5 @@ questionArray:
       answer: "We assign a dedicated project manager to oversee each project, ensuring that timelines are met, resources are allocated efficiently, and any issues are addressed promptly to minimize disruptions. ",
     },
   ]
-imageUrl: "/galleryImage.jpg"
+imageUrl: "/gallery2.webp"
 ---
