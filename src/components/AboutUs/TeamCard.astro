@@ -1,5 +1,11 @@
 ---
 import Icon from '../Elements/Icon.astro'
+import fbIcon from '../../assets/facebook.png'
+import linkedinIcon from '../../assets/linkedin-logo.png'
+import twitterIcon from '../../assets/twitter.png'
+
+
+
 interface Props {
     image: string
     name: string
@@ -22,13 +28,13 @@ const { image, name, surname, position, fblink, twitterlink, linkedinlink,accent
     <p>{name} {surname}</p>
     <div>
         <a href={fblink} target="_blank" rel="noopener noreferrer">
-            <Icon src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram"/>
+            <Icon src={fbIcon.src} alt="instagram"/>
         </a>
         <a href={twitterlink} target="_blank" rel="noopener noreferrer">
-            <Icon src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="twitter"/>
+            <Icon src={twitterIcon.src} alt="twitter"/>
         </a>
         <a href={linkedinlink} target="_blank" rel="noopener noreferrer">
-            <Icon src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin"/>
+            <Icon src={linkedinIcon.src} alt="linkedin"/>
         </a>
     </div>
 </div>
@@ -61,6 +67,14 @@ p:nth-child(3){
 p{
     font-weight: 800;
     text-align: center;
+}
+
+a{
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    transform: scale(1.1);
 }
 
 .card div{
