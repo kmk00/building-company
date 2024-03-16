@@ -22,6 +22,12 @@ function Question({ question, answer }: { question: string; answer: string }) {
   const flexDivStyles = {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
+  };
+
+  const imageStyles = {
+    width: "3.5rem",
+    height: "3.5rem",
   };
 
   return (
@@ -29,9 +35,17 @@ function Question({ question, answer }: { question: string; answer: string }) {
       <div style={flexDivStyles}>
         <p>{question}</p>
         {isClicked ? (
-          <img src="https://img.icons8.com/ios-glyphs/30/000000/minus.png" />
+          <img
+            alt="minus"
+            style={imageStyles}
+            src="https://img.icons8.com/ios-glyphs/30/000000/minus.png"
+          />
         ) : (
-          <img src="https://img.icons8.com/ios-glyphs/30/000000/plus.png" />
+          <img
+            alt="plus"
+            style={imageStyles}
+            src="https://img.icons8.com/ios-glyphs/30/000000/plus.png"
+          />
         )}
       </div>
       <div style={{ display: isClicked ? "block" : "none" }}>

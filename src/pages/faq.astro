@@ -17,6 +17,7 @@ const secondaryHeader = await Astro.glob('../content/faq/SecondaryHeader.md');
         {allQuestions && allQuestions.map((question) => (
             <div>
                 <Image
+                    class='image'
                     width={360}
                     height={270}
                     src={question.frontmatter.imageUrl} 
@@ -38,11 +39,15 @@ const secondaryHeader = await Astro.glob('../content/faq/SecondaryHeader.md');
 
 main > div{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     padding-block: 4rem;
     gap: 4rem;
     flex-wrap: wrap;
+}
+
+.image{
+    padding-top: 2rem
 }
 
 main > div:nth-child(2n + 1){
