@@ -1,4 +1,4 @@
 ---
 title: "about us"
-text: "ABOUT US Portfolio sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. "
+text: "Our journey began with a simple yet ambitious goal: to build better spaces that enhance lives and empower dreams. Over the years, we've honed our expertise, expanded our capabilities, and earned the trust of countless clients who rely on us to bring their visions to life. "
 ---

@@ -1,4 +1,4 @@
 ---
 title: "our services"
-text: "PROJECTS Portfolio sit amet, consectetur adipiscing elit. Morbi venenatis eget purus quis blandit. Ut porttitor fringilla tortor, nec congue urna luctus quis. Sed vehicula, erat ac commodo elementum, enim tortor interdum nibh, quis condimentum mi sem eu sapien. Nunc viverra mi at nulla faucibus, at lacinia ligula rutrum. "
+text: "From concept to completion, we offer end-to-end solutions that encompass every aspect of the construction process. Whether you're dreaming of building your dream home, revitalizing a commercial space, or embarking on a large-scale industrial project, we have the expertise, experience, and dedication to bring your vision to life. "
 ---

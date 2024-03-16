@@ -1,13 +1,13 @@
 ---
-title: "we work with team"
-smallTitle: "OUR TEAM"
+title: "meet our team"
+smallTitle: "THE FACE BEHIND ELEVATE BUILD"
 teamCards:
   [
     {
       image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
       name: "John",
-      surname: "Doe",
-      position: "Ceo of Company",
+      surname: "Smith",
+      position: "Project Manager",
       fblink: "",
       twitterlink: "",
       linkedinlink: "",
@@ -15,9 +15,9 @@ teamCards:
     },
     {
       image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      name: "John",
-      surname: "Doe",
-      position: "Ceo of Company",
+      name: "Mike",
+      surname: "Johnson",
+      position: "Lead Architect",
       fblink: "",
       twitterlink: "",
       linkedinlink: "",
@@ -25,9 +25,9 @@ teamCards:
     },
     {
       image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      name: "John",
-      surname: "Doe",
-      position: "Ceo of Company",
+      name: "Michael",
+      surname: "Brown",
+      position: "Marketing Manager",
       fblink: "",
       twitterlink: "",
       linkedinlink: "",
@@ -35,9 +35,9 @@ teamCards:
     },
     {
       image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      name: "John",
-      surname: "Doe",
-      position: "Ceo of Company",
+      name: "Adam",
+      surname: "Davis",
+      position: "Interior Designer",
       fblink: "",
       twitterlink: "",
       linkedinlink: "",
@@ -45,9 +45,9 @@ teamCards:
     },
     {
       image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-      name: "John",
-      surname: "Doe",
-      position: "Ceo of Company",
+      name: "Robert",
+      surname: "Garcia",
+      position: "Civil Engineer",
       fblink: "",
       twitterlink: "",
       linkedinlink: "",

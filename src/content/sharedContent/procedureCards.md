@@ -1,6 +1,6 @@
 ---
 title: "our procedure"
-smallTitle: "smalltitle"
+smallTitle: "OUR PROVEN PROCESS"
 cards:
   [
     {
