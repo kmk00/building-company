@@ -1,5 +1,5 @@
 ---
-mainText: "HOME DESIGN CONSULTATION"
-subText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+mainText: "STRENGTH IN STRUCTURE"
+subText: "Trust us to build the backbone of your industrial projects. Our expertise in constructing warehouses, factories, and infrastructure ensures durability and efficiency. "
 accent: false
 ---

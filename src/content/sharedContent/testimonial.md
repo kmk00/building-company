@@ -1,12 +1,12 @@
 ---
-title: "OUR TESTIMONIAL FROM BEST CLIENTS"
-smallTitle: "Clients Feedback"
-text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+title: "WHAT OUR CLIENTS SAY"
+smallTitle: "IMPORTANT FEEDBACK"
+text: "At Elevate Build, we take pride in delivering exceptional service and exceeding our clients' expectations. Don't just take our word for it—read what our satisfied clients have to say about their experience working with us."
 card:
   {
-    stars: 4.5,
-    srcPath: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    srcPath: "/avatar.jpeg",
     name: "John Doe",
-    position: "Ceo of Company",
+    position: "Ceo of Buildbud",
+    text: "Working with Elevate Build was an absolute pleasure. Their attention to detail, professionalism, and dedication to quality were evident throughout the entire project. They listened to our needs and delivered results that surpassed our expectations.",
   }
 ---

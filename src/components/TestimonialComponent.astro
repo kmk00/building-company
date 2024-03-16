@@ -8,7 +8,7 @@ type Card = {
     srcPath: string
     name: string
     position: string
-    stars: number
+    text: string
 }
 
 interface Props {
@@ -26,7 +26,8 @@ const { smallTitle, title, text, card } = Astro.props
     <TestimonialCard 
         srcPath={card.srcPath} 
         name={card.name} 
-        position={card.position} 
+        position={card.position}
+        text={card.text}
     />
     <div>
         <H6>{smallTitle}</H6>
