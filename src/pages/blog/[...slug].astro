@@ -35,7 +35,8 @@ const { post } = Astro.props
     <main>
         <section>
             <div class="post-image">
-                <Image src={post.frontmatter.thumbnail} width={300} height={200} alt="image" />
+                <img src={post.frontmatter.thumbnail} alt="image" />
+                <img src={post.frontmatter.thumbnail} alt="image" />
             </div>
             <div class="post-content" style="background-color:;" set:html={post.compiledContent()}/>
         </section>
@@ -44,3 +45,18 @@ const { post } = Astro.props
 </Layout>
 
 
+<style>
+
+.post-image{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+img{
+    width: 40%;
+    height: auto;
+}
+
+</style>
