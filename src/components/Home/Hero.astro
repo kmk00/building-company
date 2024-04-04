@@ -10,26 +10,40 @@ interface Props {
     smallTitle: string
     text: string
     btnLabel: string
+    heroImage: string
 }
 
-const { title, smallTitle, text, btnLabel } = Astro.props
+const { title, smallTitle, text, btnLabel, heroImage } = Astro.props
 
 ---
 
-<section>
+<section style={`background-image: url(${heroImage})`}>
     <!-- Hero Section -->
+    <div class="overlay"></div>
     <div class="hero-content">
-        <H6>{smallTitle}</H6>
-        <H1>{title}</H1>
-        <TextParagraph>{text}</TextParagraph>
-        <Button label={btnLabel} textColor="var(--accent-color)" backgroundColor="var(--background-color)" />
+        <H6 color='var(--background-color)'>{smallTitle}</H6>
+        <H1 color='var(--background-color)'>{title}</H1>
+        <TextParagraph color='var(--background-color)'>{text}</TextParagraph>
+        <Button label={btnLabel} textColor="var(--text-color)" backgroundColor="var(--background-color)" />
     </div>
 </section>
 
-<style>
+<style define:vars={heroImage}>
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.521);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 section{
-    background-color: var(--secondary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
 div{
