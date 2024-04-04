@@ -1,16 +1,58 @@
 ---
 import Logo from './Logo.astro';
 import Navigation from './Navigation.astro';
+import Icon from '../Elements/Icon.astro';
+import NavigationMobile from './NavigationMobile.astro';
 ---
+
+<script>
+
+const button = document.querySelector('#menuIcon');
+const menuMobile = document.querySelector('.menu-mobile-container');
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 500) {
+        menuMobile.classList.add('hidden');
+    }
+})
+
+button.addEventListener('click', () => {
+    menuMobile.classList.toggle('hidden');
+})
+
+</script>
+
 
 <header>
     <div class="logo">
         <Logo />
     </div>
     <Navigation />
+    <button id="menuIcon" class="menuIcon">
+        <Icon alt="menu" src="/menu-icon.svg" />
+    </button>
+    <div class="hidden menu-mobile-container">
+        <NavigationMobile />
+    </div>
 </header>
 
 <style>
+
+.menuIcon, .hidden{
+    display: none;
+}
+
+.menuIcon{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.menuIcon:hover{
+    scale: 1.02;
+}
+
 
 header{
     background-color: var(--dark-color);
@@ -21,10 +63,23 @@ header{
     border-bottom: 1px solid var(--background-color);
 }
 
+@media screen and (max-width: 500px) {
+ 
+    .menuIcon{
+        display: block;
+    }
+
+    header{
+        display: block;
+    }
+
+}
+
 @media screen and (max-width: 900px) {
     .logo{
         display: none;
     }
+
 }
 
 </style>
