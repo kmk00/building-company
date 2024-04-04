@@ -47,7 +47,7 @@ function ImageCarousel({ images }: ImageCarouselProps) {
           },
         }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 2000 }}
       >
         {images.map((image) => (
           <SwiperSlide key={image}>
