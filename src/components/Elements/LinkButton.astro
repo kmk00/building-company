@@ -1,0 +1,35 @@
+---
+import Button from './Button.astro';
+
+
+interface Props {
+    href: string;
+    label: string;
+    textColor?: string;
+    backgroundColor?: string;
+}
+
+
+const { href, label, textColor, backgroundColor } = Astro.props;
+
+---
+
+
+<a href={href}>
+    <Button textColor={textColor} backgroundColor={backgroundColor} label={label}/>
+</a>
+
+
+<style>
+a{
+    text-decoration: none;
+
+}
+
+a:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+</style>

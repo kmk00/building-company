@@ -4,6 +4,7 @@ import H1 from '../Elements/H1.astro';
 import H6 from '../Elements/H6.astro';
 import TextParagraph from '../Elements/TextParagraph.astro';
 import Button from '../Elements/Button.astro';
+import LinkButton from '../Elements/LinkButton.astro';
 
 interface Props {
     title: string
@@ -24,7 +25,7 @@ const { title, smallTitle, text, btnLabel, heroImage } = Astro.props
         <H6 color='var(--background-color)'>{smallTitle}</H6>
         <H1 color='var(--background-color)'>{title}</H1>
         <TextParagraph color='var(--background-color)'>{text}</TextParagraph>
-        <Button label={btnLabel} textColor="var(--text-color)" backgroundColor="var(--background-color)" />
+        <LinkButton href="/about" label={btnLabel} textColor="var(--text-color)" backgroundColor="var(--background-color)" />
     </div>
 </section>
 
