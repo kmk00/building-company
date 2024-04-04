@@ -6,10 +6,6 @@ images:
     "/gallery3.webp",
     "/gallery4.webp",
     "/gallery5.webp",
-    "/gallery1.webp",
-    "/gallery2.webp",
-    "/gallery3.webp",
-    "/gallery4.webp",
-    "/gallery5.webp",
+    "/gallery6.webp",
   ]
 ---
