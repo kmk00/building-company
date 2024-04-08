@@ -2,6 +2,8 @@
 
 This project is a content-rich website made with AstroJs, React and Markdown
 
+[Website demo](https://kmk00-elevatebuild.netlify.app/)
+
 ## Features
 
 - Content of the website and blog is powered with the content from markdown files
