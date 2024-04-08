@@ -28,4 +28,4 @@ Digital technology is playing an increasingly important role in sustainable cons
 
 The future of sustainable construction is bright, with continued advancements in green building materials, energy-efficient design, innovative construction techniques, and digital technology. By embracing sustainability, the construction industry has the opportunity to not only reduce its environmental footprint but also create healthier, more resilient, and more comfortable buildings for generations to come.
 
-![post-image](/public/gallery4.webp "Image 1")
+![post-image](/gallery4.webp "Image 1")
