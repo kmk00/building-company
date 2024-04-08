@@ -10,6 +10,7 @@ This project is a content-rich website made with AstroJs, React and Markdown
 ## Technologies
 
 - AstroJS
+- Typescript
 - React
 - Swiper
 
