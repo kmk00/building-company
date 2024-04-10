@@ -19,10 +19,21 @@ a{
 
 @media screen and (max-width: 500px) {
     a{
-        padding-bottom: 0.4rem;
-        border-bottom: 0.2rem solid var(--background-color);
+        padding-block: 0.8rem;
+    }    
+
+    a:nth-child(2n+1){
+        background-color: var(--dark-color-light);
     }
-    
+
+    a:hover{
+        color: var(--primary-color);
+        background-color: var(--accent-color);
+        color:black;
+        scale: 1.08;
+        transition: all 0.1s ease;
+    }
+
 }
 
 </style>
